@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Staatliches&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --light: #53B1Bf;
+  --dark: #042A2B;
+  --text-light: #FDECEF;
+  --text-dark: black;
+  --accent: #6B0F1A;
+  --boxy-font: "Staatliches";
+  --normal-font: "Poppins";
+}
+
+body {
+  color: var(--text-dark);
+  font-family: var(--normal-font);
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  height: 15vh;
+  background-color: var(--dark);
+  color: var(--text-light);
+  text-align: center;
+}
+
+main {
+  height: 80vh;
+  display: grid;
+  flex-direction: column;
+  font-size: 1.2rem;
+  font-weight: bolder;
+  background-color: var(--light);
+}
+
+main * {
+  font-size: inherit;
+}
+
+header h1 {
+  font-family: var(--boxy-font);
+  font-size: 3em;
+  margin: 0;
+}
+
+header #tagline {
+  margin: 0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form>* {
+  margin: 15px;
+  font-size: inherit;
+}
+
+form select, form input {
+  width: 50%;
+  margin: auto;
+}
+
+form #submit {
+  width: 75%;
+  max-width: 400px;
+  margin-top: 20px;
+  font-size: 1.5em;
+  height: 80px;
+  background-color: var(--accent);
+  color: var(--text-light);
+  border: none;
+  box-shadow: 0 0 5px 1px var(--accent);
+}
+
+form #submit:active {
+  border: 1px solid var(--dark);
+  transition: border 2s;
+}
+
+form label {
+  font-family: var(--boxy-font);
+}
+
+#results {
+  flex: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+footer {
+  height: 5vh;
+  background-color: var(--dark);
+  color: var(--text-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer a {
+  color: inherit;
+  border-radius: 5px;
+  padding: 5px;
+  transition: color, background-color 0.25s;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+footer a:active {
+  background-color: var(--light);
+  color: var(--dark)
+}
+
+#results p {
+  width: 75%;
+  max-width: 800px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--boxy-font);
+}
+
+#results span {
+  text-align: right;
+  margin-left: 10px;
+  font-family: var(--normal-font)
+}
+
+#results span.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted var(--dark);
+  font-family: var(--boxy-font);
+}
+
+#results span.tooltiptext {
+  visibility: hidden;
+  text-align: left;
+  width: 200px;
+  background-color: var(--accent);
+  color: var(--text-light);
+  border-radius: 10px;
+  padding: 10px;
+  position: absolute;
+  z-index: 1;
+  font-family: var(--normal-font);
+  font-size: 0.8em;
+}
+
+#results span.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+.advanced {
+  display: none;
+}
+
+main p#ShowHideForm {
+  width: 30;
+  margin: auto;
+  margin-top: 10px;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 1s, display 3s;
+}
+
+main p#ShowHideForm:hover {
+  text-decoration: underline;
+  background-color: #042A2B30;
+  transition: background-color 1s;
+  border-radius:
+}
+
+main p#ShowHideForm:active {
+  border: 2px solid var(--dark);
+}
+
+.advanced#priceInput {
+  color: black;
+  border-color: black;
+  background-color: black;
+  cursor: grab;
+}
+
+.advanced#priceInput:active {
+  cursor: grabbing;
+}

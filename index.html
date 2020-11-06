@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel=" stylesheet" type="text/css" href="styles.css">
+  <title>Act</title>
+</head>
+
+<body>
+  <header>
+    <h1>Act</h1>
+    <p id="tagline">Go and do something.</p>
+  </header>
+  <main>
+
+    <p id="ShowHideForm"><span>Refine your search<span></p>
+    <form id="advancedSearchForm">
+      <label class="advanced" for="type">Activity Type: </label>
+      <select class="advanced" id="type" name="type">
+        <option value="Pick an Option">Pick an Option</option>
+        <option value="busywork">Busywork</option>
+        <option value="charity">Charity</option>
+        <option value="cooking">Cooking</option>
+        <option value="diy">DIY</option>
+        <option value="education">Education</option>
+        <option value="music">Music</option>
+        <option value="recreational">Recreation</option>
+        <option value="relaxation">Relaxation</option>
+        <option value="social">Social</option>
+      </select>
+      <label class="advanced" for="participantsInput">Number of Participants: </label>
+      <input class="advanced" id="participantsInput" name="participantsInput" type="text" value="">
+      <label class="advanced" id="priceLabel" for="price">Price</label>
+      <input class="advanced" id="priceInput" name="price" type="range" min="0" max="100" value="">
+      <input id="submit" type="submit" value="Find activity Ideas">
+    </form>
+
+    <section id="results">
+      <p><span class="tooltip">Activity:<span class="tooltiptext">Hope you enjoy it!</span></span> <span id="activity"></span></p>
+      <p><span class="tooltip">Accessibility:<span class="tooltiptext">A rating of ease of the activity from 0 (easy to do) to 1 (difficult)</span></span> <span id="accessibility"></span></p>
+      <p><span class="tooltip">Type:<span class="tooltiptext">The category of activity</span></span> <span id="type"></span></p>
+      <p><span class="tooltip">Participants:<span class="tooltiptext">The number of participants suggested</span></span> <span id="participants"></span></p>
+      <p><span class="tooltip">Price:<span class="tooltiptext">A rating of the price of the activity, ranging from 0 (free) to 1 (expensive)</span></span> <span id="price"></span></p>
+    </section>
+  </main>
+
+  <footer>
+    <a href="#">Check this site out on Github!</a>
+  </footer>
+
+  <script src="script.js" charset="utf-8"></script>
+</body>
+
+</html>
